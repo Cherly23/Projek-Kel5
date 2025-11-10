@@ -4,6 +4,8 @@
  */
 package projek_kelmp5;
 
+import javax.swing.ButtonGroup;
+
 /**
  *
  * @author HP
@@ -19,6 +21,10 @@ public class UstadzFrame extends javax.swing.JFrame {
     
     void reset() {
         jNamaLengkap1.setText("");
+        jAlamat.setText("");
+        jNoHp.setText("");
+        
+        buttonGroup1.clearSelection();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,12 +35,15 @@ public class UstadzFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         breset = new javax.swing.JButton();
         bSimpan = new javax.swing.JButton();
+        Hapus = new javax.swing.JButton();
         jAlamat = new javax.swing.JTextField();
         jNamaLengkap1 = new javax.swing.JTextField();
         jNoHp = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        jlaki = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,9 +59,21 @@ public class UstadzFrame extends javax.swing.JFrame {
         });
         getContentPane().add(breset, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 80, 30));
 
+        bSimpan.setBorderPainted(false);
+        bSimpan.setContentAreaFilled(false);
         bSimpan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bSimpan.setEnabled(false);
-        getContentPane().add(bSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, 80, 30));
+        getContentPane().add(bSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, 90, 30));
+
+        Hapus.setBorderPainted(false);
+        Hapus.setContentAreaFilled(false);
+        Hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HapusActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 80, 30));
 
         jAlamat.setBackground(new java.awt.Color(255, 255, 255));
         jAlamat.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -90,10 +111,25 @@ public class UstadzFrame extends javax.swing.JFrame {
         });
         getContentPane().add(jNoHp, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 260, 20));
 
-        jRadioButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton1.setText("jRadioButton1");
-        jRadioButton1.setBorder(null);
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, -1, -1));
+        jlaki.setForeground(new java.awt.Color(0, 0, 0));
+        jlaki.setText("Laki-laki");
+        jlaki.setBorder(null);
+        jlaki.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlakiActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jlaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, -1, -1));
+
+        jRadioButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jRadioButton2.setText("Perempuan");
+        jRadioButton2.setContentAreaFilled(false);
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projek_kelmp5/Data_Pengurus_Mentahan.png"))); // NOI18N
@@ -119,6 +155,21 @@ public class UstadzFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         reset();
     }//GEN-LAST:event_bresetActionPerformed
+
+    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HapusActionPerformed
+
+    private void jlakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlakiActionPerformed
+        // TODO add your handling code here:
+        ButtonGroup group = new ButtonGroup();
+        group.add(jlaki);
+        group.add(jRadioButton2);
+    }//GEN-LAST:event_jlakiActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,19 +201,23 @@ public class UstadzFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new UstadzFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Hapus;
     private javax.swing.JButton bSimpan;
     private javax.swing.JButton breset;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField jAlamat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jNamaLengkap1;
     private javax.swing.JTextField jNoHp;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jlaki;
     // End of variables declaration//GEN-END:variables
 
    
