@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package JFrame;
+//import kelas.user;
+import javax.swing.table.DefaultTableModel;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -26,23 +30,20 @@ public class DataSantri extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        santri_putra = new javax.swing.JLabel();
-        santri_putri = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Nama = new javax.swing.JTable();
-        Baground = new javax.swing.JLabel();
         Pencarian = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        Baground = new javax.swing.JLabel();
+        btnUbah = new javax.swing.JButton();
+        btnHapus = new javax.swing.JButton();
+        btnTambah = new javax.swing.JButton();
+        santri_putra = new javax.swing.JLabel();
+        santri_putri = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        santri_putra.setFont(new java.awt.Font("Segoe UI", 1, 64)); // NOI18N
-        santri_putra.setText("50");
-        getContentPane().add(santri_putra, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 80, 90));
-
-        santri_putri.setFont(new java.awt.Font("Segoe UI", 1, 64)); // NOI18N
-        santri_putri.setText("50");
-        getContentPane().add(santri_putri, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 80, 90));
 
         Nama.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -57,17 +58,54 @@ public class DataSantri extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Nama);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 860, 410));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 970, 380));
+
+        Pencarian.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        Pencarian.setBorder(null);
+        Pencarian.setOpaque(true);
+        getContentPane().add(Pencarian, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 60, 160, 30));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("50");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 80, 50));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("50");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 80, 50));
 
         Baground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Data_Santri_Mentahan.png"))); // NOI18N
-        Baground.setText("jLabel1");
-        getContentPane().add(Baground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 720));
+        getContentPane().add(Baground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+        getContentPane().add(btnUbah, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 100, 40));
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 100, 40));
 
-        Pencarian.setText("jTextField1");
-        getContentPane().add(Pencarian, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 200, 40));
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, 100, 40));
+
+        santri_putra.setFont(new java.awt.Font("Segoe UI", 1, 64)); // NOI18N
+        santri_putra.setText("50");
+        getContentPane().add(santri_putra, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 80, 90));
+
+        santri_putri.setFont(new java.awt.Font("Segoe UI", 1, 64)); // NOI18N
+        santri_putri.setText("50");
+        getContentPane().add(santri_putri, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 80, 90));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO santri (nama, alamat, jenis) VALUES (?,?,?)";
+            
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_btnTambahActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,6 +146,11 @@ public class DataSantri extends javax.swing.JFrame {
     private javax.swing.JLabel Baground;
     private javax.swing.JTable Nama;
     private javax.swing.JTextField Pencarian;
+    private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnTambah;
+    private javax.swing.JButton btnUbah;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel santri_putra;
     private javax.swing.JLabel santri_putri;
