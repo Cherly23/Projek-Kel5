@@ -15,6 +15,8 @@ public class Dashboard extends javax.swing.JFrame {
      */
     public Dashboard() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
+//        execute();
     }
 
     /**
@@ -26,25 +28,102 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        pn_atas = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        pn_subMenu = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        pn_menu = new javax.swing.JPanel();
+        pn_content = new javax.swing.JPanel();
+        pn_utama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1275, 715));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Dasboard Utama Mentahan.png"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(1275, 720));
+        pn_atas.setBackground(new java.awt.Color(35, 64, 60));
+        pn_atas.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        jLabel2.setFont(new java.awt.Font("Book Antiqua", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 205, 0));
+        jLabel2.setText("SIMASTREN");
+
+        jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 205, 0));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo Pondok 3.png"))); // NOI18N
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("TUTUP");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-close-20 (3).png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 0, 50, 50));
+        javax.swing.GroupLayout pn_atasLayout = new javax.swing.GroupLayout(pn_atas);
+        pn_atas.setLayout(pn_atasLayout);
+        pn_atasLayout.setHorizontalGroup(
+            pn_atasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_atasLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pn_atasLayout.setVerticalGroup(
+            pn_atasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addGroup(pn_atasLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pn_atas, java.awt.BorderLayout.PAGE_START);
+
+        pn_subMenu.setBackground(new java.awt.Color(255, 255, 255));
+        pn_subMenu.setPreferredSize(new java.awt.Dimension(218, 392));
+
+        jScrollPane1.setBorder(null);
+
+        pn_menu.setBackground(new java.awt.Color(11, 43, 38));
+        pn_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jScrollPane1.setViewportView(pn_menu);
+
+        javax.swing.GroupLayout pn_subMenuLayout = new javax.swing.GroupLayout(pn_subMenu);
+        pn_subMenu.setLayout(pn_subMenuLayout);
+        pn_subMenuLayout.setHorizontalGroup(
+            pn_subMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+        );
+        pn_subMenuLayout.setVerticalGroup(
+            pn_subMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pn_subMenu, java.awt.BorderLayout.LINE_START);
+
+        pn_content.setBackground(new java.awt.Color(255, 255, 255));
+
+        pn_utama.setBackground(new java.awt.Color(255, 255, 255));
+        pn_utama.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout pn_contentLayout = new javax.swing.GroupLayout(pn_content);
+        pn_content.setLayout(pn_contentLayout);
+        pn_contentLayout.setHorizontalGroup(
+            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pn_utama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+        );
+        pn_contentLayout.setVerticalGroup(
+            pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pn_utama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pn_content, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,5 +171,12 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel pn_atas;
+    private javax.swing.JPanel pn_content;
+    private javax.swing.JPanel pn_menu;
+    private javax.swing.JPanel pn_subMenu;
+    private javax.swing.JPanel pn_utama;
     // End of variables declaration//GEN-END:variables
 }
