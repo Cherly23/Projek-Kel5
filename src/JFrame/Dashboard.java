@@ -4,19 +4,111 @@
  */
 package JFrame;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author cherly
  */
 public class Dashboard extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Dashboard
-     */
     public Dashboard() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
-//        execute();
+        execute();
+    }
+    
+    private void execute() {
+        ImageIcon iconHome          = new ImageIcon(getClass().getResource("/Image/iconHome.png"));
+        ImageIcon iconDashboard     = new ImageIcon(getClass().getResource("/Image/iconDashboard.png"));
+        ImageIcon iconAkademik      = new ImageIcon(getClass().getResource("/Image/iconAkademik.png"));
+        ImageIcon iconSantri        = new ImageIcon(getClass().getResource("/Image/iconSantri.png"));
+        ImageIcon iconKelas         = new ImageIcon(getClass().getResource("/Image/iconKitab.png"));
+        ImageIcon iconKitab         = new ImageIcon(getClass().getResource("/Image/iconKitab.png"));
+        ImageIcon iconKepengurusan  = new ImageIcon(getClass().getResource("/Image/iconKepengurusan.png"));
+        ImageIcon iconPengurus      = new ImageIcon(getClass().getResource("/Image/iconPengurus.png"));
+        ImageIcon iconPengajar      = new ImageIcon(getClass().getResource("/Image/iconPengajar.png"));
+        
+        MenuItem dashboard = new MenuItem(null, true, iconDashboard, "DASHBOARD", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+        
+        MenuItem santri = new MenuItem(null, true, iconSantri, "DATA SANTRI", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+         
+        MenuItem kelas = new MenuItem(null, true, iconKelas, "DATA KELAS", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+          
+        MenuItem kitab = new MenuItem(null, true, iconKitab, "DATA KITAB", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+           
+        MenuItem pengurus = new MenuItem(null, true, iconPengurus, "DATA PENGURUS", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+            
+        MenuItem pengajar = new MenuItem(null, true, iconPengajar, "DATA PENGAJAR", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                pn_utama.add(new Dashboard2());
+            }
+        });
+             
+        MenuItem menuHome          = new MenuItem(iconHome, false, null, "HOME", null, dashboard);
+        MenuItem menuAkademik      = new MenuItem(iconAkademik, false, null, "AKADEMIK SANTRI", null, santri, kelas, kitab);
+        MenuItem menuKepengurusan  = new MenuItem(iconKepengurusan, false, null, "KEPENGURUSAN", null, pengurus, pengajar);
+        
+        addMenu(menuHome, menuAkademik, menuKepengurusan);
+    }
+    
+    private  void  addMenu(MenuItem... menu) {
+        for (int i = 0; i < menu.length; i++) {
+            pn_menu.add(menu[i]);
+            ArrayList<MenuItem> subMenu = menu[i].getSubMenu();
+            for (MenuItem m : subMenu) {
+                addMenu(m);
+            }
+        }
+        pn_menu.revalidate();
     }
 
     /**
@@ -41,6 +133,11 @@ public class Dashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1275, 715));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         pn_atas.setBackground(new java.awt.Color(35, 64, 60));
         pn_atas.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -54,7 +151,8 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo Pondok 3.png"))); // NOI18N
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("TUTUP");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-close-20 (3).png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -70,8 +168,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         pn_atasLayout.setVerticalGroup(
@@ -86,19 +184,21 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(pn_atas, java.awt.BorderLayout.PAGE_START);
 
         pn_subMenu.setBackground(new java.awt.Color(255, 255, 255));
-        pn_subMenu.setPreferredSize(new java.awt.Dimension(218, 392));
+        pn_subMenu.setPreferredSize(new java.awt.Dimension(228, 392));
 
         jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         pn_menu.setBackground(new java.awt.Color(11, 43, 38));
-        pn_menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pn_menu.setLayout(new javax.swing.BoxLayout(pn_menu, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(pn_menu);
 
         javax.swing.GroupLayout pn_subMenuLayout = new javax.swing.GroupLayout(pn_subMenu);
         pn_subMenu.setLayout(pn_subMenuLayout);
         pn_subMenuLayout.setHorizontalGroup(
             pn_subMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
         );
         pn_subMenuLayout.setVerticalGroup(
             pn_subMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,7 +216,7 @@ public class Dashboard extends javax.swing.JFrame {
         pn_content.setLayout(pn_contentLayout);
         pn_contentLayout.setHorizontalGroup(
             pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_utama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+            .addComponent(pn_utama, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
         );
         pn_contentLayout.setVerticalGroup(
             pn_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,6 +232,13 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        pn_utama.add(new TampilanAwal());
+        pn_utama.repaint();
+        pn_utama.revalidate();
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments

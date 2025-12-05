@@ -26,19 +26,83 @@ public class Dashboard2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 718, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 531, Short.MAX_VALUE)
-        );
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jmlhPengajar = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jmlhKelas = new javax.swing.JLabel();
+        jmlhKitab = new javax.swing.JLabel();
+        jmlhSantri = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(11, 43, 38));
+        jLabel2.setText("Jumlah Pengajar");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 140, 50));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(11, 43, 38));
+        jLabel6.setText("DASHBOARD");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 300, 50));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(11, 43, 38));
+        jLabel3.setText("Jumlah Kelas");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 110, 50));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(11, 43, 38));
+        jLabel4.setText("Jumlah Kitab");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 110, 50));
+
+        jmlhPengajar.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jmlhPengajar.setForeground(new java.awt.Color(11, 43, 38));
+        jmlhPengajar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmlhPengajar.setText("56");
+        add(jmlhPengajar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 120, 50));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(11, 43, 38));
+        jLabel7.setText("Jumlah Santri");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 130, 50));
+
+        jmlhKelas.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jmlhKelas.setForeground(new java.awt.Color(11, 43, 38));
+        jmlhKelas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmlhKelas.setText("56");
+        add(jmlhKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 120, 50));
+
+        jmlhKitab.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jmlhKitab.setForeground(new java.awt.Color(11, 43, 38));
+        jmlhKitab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmlhKitab.setText("56");
+        add(jmlhKitab, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 120, 50));
+
+        jmlhSantri.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jmlhSantri.setForeground(new java.awt.Color(11, 43, 38));
+        jmlhSantri.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmlhSantri.setText("56");
+        add(jmlhSantri, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 120, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Dashboard2 Mentahan.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jmlhKelas;
+    private javax.swing.JLabel jmlhKitab;
+    private javax.swing.JLabel jmlhPengajar;
+    private javax.swing.JLabel jmlhSantri;
     // End of variables declaration//GEN-END:variables
 }
